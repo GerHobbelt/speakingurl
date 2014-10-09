@@ -1,6 +1,6 @@
 /* global describe,it */
 
-var getSlug = require('../lib');
+var getSlug = require('../lib').getSlug;
 
 describe('getSlug defaults', function () {
     'use strict';
@@ -84,8 +84,8 @@ describe('getSlug defaults', function () {
         getSlug('(∆)299')
             .should.eql('delta-299');
         getSlug('(∆)299', {
-            mark: true
-        })
+                mark: true
+            })
             .should.eql('(delta)299');
 
         getSlug('∆299')

@@ -1,6 +1,6 @@
 /* global describe,it */
 
-var getSlug = require('../lib');
+var getSlug = require('../lib').getSlug;
 
 describe('getSlug translate arabic letters', function () {
     'use strict';
@@ -8,8 +8,8 @@ describe('getSlug translate arabic letters', function () {
     it('should be ', function (done) {
 
         getSlug('بشس تاقفغقف  -  ت ب ي ق', {
-            language: 'ar'
-        })
+                language: 'ar'
+            })
             .should.eql('bshs-taqfghqf-t-b-y-q');
 
         done();
