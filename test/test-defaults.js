@@ -70,37 +70,6 @@ describe('getSlug defaults', function () {
         done();
     });
 
-    it('should handle whitespace after symbol', function (done) {
-
-        getSlug('∆299')
-            .should.eql('delta-299');
-        getSlug('∆world')
-            .should.eql('delta-world');
-        getSlug('∆-299')
-            .should.eql('delta-299');
-        getSlug('∆-world')
-            .should.eql('delta-world');
-
-        getSlug('(∆)299')
-            .should.eql('delta-299');
-        getSlug('(∆)299', {
-                mark: true
-            })
-            .should.eql('(delta)299');
-
-        getSlug('∆299')
-            .should.eql('delta-299');
-        getSlug('∆world')
-            .should.eql('delta-world');
-
-        getSlug('Hello∆299')
-            .should.eql('hello-delta-299');
-        getSlug('299∆Hello')
-            .should.eql('299-delta-hello');
-
-        done();
-    });
-
     it('should not fail if symbol at the end', function (done) {
 
         getSlug('test &')
@@ -109,12 +78,6 @@ describe('getSlug defaults', function () {
             .should.eql('test-and');
         getSlug('test &', '_')
             .should.eql('test_and');
-        getSlug('test ♥')
-            .should.eql('test-love');
-        getSlug('test ♥ ')
-            .should.eql('test-love');
-        getSlug('test ♥  ')
-            .should.eql('test-love');
 
         done();
 

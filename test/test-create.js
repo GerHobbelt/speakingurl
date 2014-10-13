@@ -3,22 +3,6 @@
 describe('getSlug create', function () {
     'use strict';
 
-    it('with symbols', function (done) {
-
-        var getSlug = require('../lib')
-            .createSlug({
-                lang: 'en',
-                uric: true,
-                uricNoSlash: true,
-                mark: true
-            });
-
-        getSlug('Foo (♥) ; Baz=Bar')
-            .should.eql('foo-(love)-;-baz=bar');
-
-        done();
-    });
-
     it('without options', function (done) {
 
         var getSlug = require('../lib')

@@ -22,11 +22,6 @@ describe('getSlug maintainCase', function () {
             })
             .should.eql('Foo-Bar-Baz');
 
-        getSlug('Foo > Bar ♥ Baz', {
-                maintainCase: true
-            })
-            .should.eql('Foo-greater-than-Bar-love-Baz');
-
         done();
     });
 });
