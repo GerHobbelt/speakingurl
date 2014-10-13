@@ -134,4 +134,4 @@ gulp.task('watch', function () {
     gulp.watch([path.json, path.lib], ['jshint', 'test']);
 });
 
-gulp.task('default', ['test', 'jshint', 'uglify']);
+gulp.task('default', ['jshint', 'uglify']);
