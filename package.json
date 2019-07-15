@@ -13,10 +13,12 @@
         "url": "https://github.com/pid/speakingurl/issues"
     },
     "license": "BSD-3-Clause",
-    "licenses": [{
-        "type": "BSD",
-        "url": "https://raw.github.com/pid/speakingurl/master/LICENSE"
-    }],
+    "licenses": [
+        {
+            "type": "BSD",
+            "url": "https://raw.github.com/pid/speakingurl/master/LICENSE"
+        }
+    ],
     "keywords": [
         "slug",
         "slugify",
@@ -45,21 +47,21 @@
     "filename": "speakingurl.min.js",
     "dependencies": {},
     "devDependencies": {
-        "gulp": "^3.8.8",
-        "gulp-bump": "^2.4.0",
-        "gulp-header": "^1.2.2",
-        "gulp-jsbeautifier": "^2.0.3",
-        "gulp-jshint": "^2.0.0",
-        "gulp-load-plugins": "^1.1.0",
-        "gulp-mocha": "^4.3.1",
-        "gulp-rename": "^1.2.0",
-        "gulp-replace": "^0.6.1",
-        "gulp-uglify": "^3.0.0",
-        "jshint": "^2.8.0",
-        "jshint-stylish": "^2.0.0",
-        "minimist": "^1.1.0",
-        "mocha": "^3.0.2",
-        "should": "^11.1.0"
+        "gulp": "4.0.2",
+        "gulp-bump": "3.1.3",
+        "gulp-header": "2.0.9",
+        "gulp-jsbeautifier": "3.0.0",
+        "gulp-jshint": "2.1.0",
+        "gulp-load-plugins": "2.0.0",
+        "gulp-mocha": "6.0.0",
+        "gulp-rename": "1.4.0",
+        "gulp-replace": "1.0.0",
+        "gulp-uglify": "3.0.2",
+        "jshint": "2.10.2",
+        "jshint-stylish": "2.2.1",
+        "minimist": "1.2.0",
+        "mocha": "6.1.4",
+        "should": "13.2.3"
     },
     "jam": {
         "dependencies": {},
