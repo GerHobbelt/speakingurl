@@ -45,7 +45,7 @@
     },
     "author": "Sascha Droste <pid@posteo.net> (https://twitter.com/SaschaDroste)",
     "main": "index",
-    "filename": "speakingurl.min.js",
+    "filename": "speakingurl.js",
     "dependencies": {},
     "devDependencies": {
         "gulp": "4.0.2",
@@ -66,7 +66,7 @@
     },
     "jam": {
         "dependencies": {},
-        "main": "speakingurl.min.js",
+        "main": "speakingurl.js",
         "shim": {
             "deps": [],
             "exports": [
@@ -75,12 +75,12 @@
             ]
         },
         "include": [
-            "speakingurl.min.js",
+            "speakingurl.js",
             "README.md"
         ]
     },
     "volo": {
-        "url": "//cdnjs.cloudflare.com/ajax/libs/speakingurl/{version}/speakingurl.min.js"
+        "url": "//cdnjs.cloudflare.com/ajax/libs/speakingurl/{version}/speakingurl.js"
     },
     "engines": {
         "node": ">=0.10.0"

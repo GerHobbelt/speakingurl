@@ -14,8 +14,8 @@
     "dependencies": {},
     "development": {},
     "license": "BSD",
-    "main": "speakingurl.min.js",
+    "main": "speakingurl.js",
     "scripts": [
-        "speakingurl.min.js"
+        "speakingurl.js"
     ]
 }

@@ -10,11 +10,11 @@ var path = {
     libdir: './lib/',
     test: ['./test/**/*.js'],
     testdir: './test/',
-    build: ['package.json', 'component.json', 'bower.json', 'README.md', 'speakingurl.min.js'],
+    build: ['package.json', 'component.json', 'bower.json', 'README.md', 'speakingurl.js'],
     json: ['package.json', 'component.json', 'bower.json'],
     readme: './README.md',
 
-    target: './speakingurl.min.js'
+    target: './speakingurl.js'
 };
 
 var banner = ['/**',
@@ -94,11 +94,11 @@ gulp.task('bumpup', ['bumpup-version'], function () {
     // insert newsest version
     return gulp.src(path.readme)
         .pipe(plugin.replace(
-            /cdnjs.cloudflare.com\/ajax\/libs\/speakingurl\/\d{1,1}\.\d{1,2}\.\d{1,2}\/speakingurl.min.js/g,
-            'cdnjs.cloudflare.com/ajax/libs/speakingurl/' + pkg.version + '/speakingurl.min.js'))
+            /cdnjs.cloudflare.com\/ajax\/libs\/speakingurl\/\d{1,1}\.\d{1,2}\.\d{1,2}\/speakingurl.js/g,
+            'cdnjs.cloudflare.com/ajax/libs/speakingurl/' + pkg.version + '/speakingurl.js'))
         .pipe(plugin.replace(
-            /cdn.jsdelivr.net\/speakingurl\/\d{1,1}\.\d{1,2}\.\d{1,2}\/speakingurl.min.js/g,
-            'cdn.jsdelivr.net/speakingurl/' + pkg.version + '/speakingurl.min.js'))
+            /cdn.jsdelivr.net\/speakingurl\/\d{1,1}\.\d{1,2}\.\d{1,2}\/speakingurl.js/g,
+            'cdn.jsdelivr.net/speakingurl/' + pkg.version + '/speakingurl.js'))
         .pipe(gulp.dest(path.rootdir));
 });
 
