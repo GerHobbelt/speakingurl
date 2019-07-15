@@ -1,6 +1,6 @@
 {
-    "name": "speakingurl",
-    "version": "14.0.1",
+    "name": "@gerhobbelt/speakingurl",
+    "version": "14.0.2-1",
     "description": "Generate a slug – transliteration with a lot of options",
     "jsdelivr": "speakingurl.min.js",
     "homepage": "http://pid.github.io/speakingurl/",
@@ -40,7 +40,8 @@
         "Parsers & Compilers"
     ],
     "scripts": {
-        "test": "mocha"
+        "test": "mocha",
+        "pub": "npm publish --access public"
     },
     "author": "Sascha Droste <pid@posteo.net> (https://twitter.com/SaschaDroste)",
     "main": "index",
