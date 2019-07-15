@@ -170,6 +170,44 @@ describe('getSlug separator', function () {
 
     });
 
+    it('should work the same regardless the method it was passed', function (done) {
+        // given
+        var testString = '-ä ß üö,.';
+        var emptySeparator = '';
+
+        // when
+        var resultAsOption = getSlug(testString, { separator: emptySeparator });
+        var resultDirect = getSlug(testString, emptySeparator);
+
+        // then
+        resultAsOption.should.eql(resultDirect);
+
+        done();
+    });
+
+    it('should ignore an UNDEFINED or NULL separator, but SHOULD accept an EMPTY-STRING separator', function (done) {
+        // given
+        var testString = '-ä ß üö,.rien à désirer';
+
+        // when
+        var undef1 = getSlug(testString, { separator: undefined });
+        var undef2 = getSlug(testString, undefined);
+        var null1 = getSlug(testString, { separator: null });
+        var null2 = getSlug(testString, null);
+        var empty1 = getSlug(testString, { separator: '' });
+        var empty2 = getSlug(testString, '');
+
+        // then
+        undef1.should.eql('ae-ss-ueoe-rien-a-desirer');
+        undef2.should.eql('ae-ss-ueoe-rien-a-desirer');
+        null1.should.eql('ae-ss-ueoe-rien-a-desirer');
+        null2.should.eql('ae-ss-ueoe-rien-a-desirer');
+        empty1.should.eql('-aessueoerienadesirer');
+        empty2.should.eql('-aessueoerienadesirer');
+
+        done();
+    });
+
     it('should return empty string because of non string input', function (done) {
 
         getSlug(true)
